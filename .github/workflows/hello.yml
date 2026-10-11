@@ -10,4 +10,8 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello from github actions"
+
+      - name: show operating system
+        run: uname -a
+        
     
