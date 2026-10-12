@@ -1,0 +1,20 @@
+name: GH900 Validation
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display repository files
+        run: ls -la
+
+      - name: Validate Day 8 file
+        run: test -f day8.md
+        
